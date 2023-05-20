@@ -2,6 +2,7 @@ package it.prova.gestionetratte.service;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +12,7 @@ import it.prova.gestionetratte.repository.airbus.AirbusRepository;
 import it.prova.gestionetratte.web.api.exceptions.AirbusNotFoundException;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class AirbusServiceImpl implements AirbusService {
 
 	@Autowired

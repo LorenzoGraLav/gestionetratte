@@ -2,6 +2,8 @@ package it.prova.gestionetratte.service;
 
 import java.util.List;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,7 +13,7 @@ import it.prova.gestionetratte.repository.tratta.TrattaRepository;
 import it.prova.gestionetratte.web.api.exceptions.TrattaNotFoundException;
 
 @Service
-@Transactional(readOnly = true)
+@Transactional
 public class TrattaServiceImpl implements TrattaService {
 	
 	@Autowired
