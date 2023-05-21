@@ -1,6 +1,7 @@
 package it.prova.gestionetratte.dto;
 
 import java.time.LocalDate;
+
 import java.time.LocalTime;
 import java.util.List;
 import java.util.Set;
@@ -39,7 +40,7 @@ public class TrattaDTO {
 	@NotNull(message = "{oraAtterraggio.notnull}")
 	private LocalTime oraAtterraggio;
 
-	@NotBlank(message = "{stato.notblank}")
+	@NotNull(message = "{stato.notblank}")
 	private Stato stato;
 
 	@JsonIgnoreProperties(value = { "tratte" })

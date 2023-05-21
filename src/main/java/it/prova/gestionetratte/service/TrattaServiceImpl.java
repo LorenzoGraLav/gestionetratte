@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import it.prova.gestionetratte.model.Stato;
 import it.prova.gestionetratte.model.Tratta;
 import it.prova.gestionetratte.repository.tratta.TrattaRepository;
 import it.prova.gestionetratte.web.api.exceptions.TrattaNotFoundException;
@@ -64,6 +65,12 @@ public class TrattaServiceImpl implements TrattaService {
 	@Override
 	public List<Tratta> findByCodiceAndDescrizione(String codice, String descrizione) {
 		return repository.findByCodiceAndDescrizione(codice, descrizione);
+	}
+
+
+	@Override
+	public List<Tratta> findByStato(Stato stato) {
+		return repository.findByStato(stato);
 	}
 
 	
